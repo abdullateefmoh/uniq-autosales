@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uniq Auto</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function showDetails(name, price, desc) {
+      document.getElementById('modal').style.display = 'block';
+      document.getElementById('modalTitle').innerText = name;
+      document.getElementById('modalPrice').innerText = price;
+      document.getElementById('modalDesc').innerText = desc;
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>Uniq Auto</h1>
+  <p>Your Trusted Car Marketplace</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#cars">Cars</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+  <h1>Find Your Dream Car</h1>
+  <p>Toyota • Mercedes-Benz • BMW • More</p>
+</section>
+
+<div class="container" id="cars">
+  <h2>Available Cars</h2>
+  <div class="cars">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
+      <h3>Toyota Camry</h3>
+      <p>₦15,000,000</p>
+      <button onclick="showDetails('Toyota Camry','₦15,000,000','Reliable, fuel-efficient, 2020 model')">View Details</button>
+      <a href="https://wa.me/2340000000000?text=I%20want%20Toyota%20Camry" target="_blank">
+        <button>WhatsApp</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1549921296-3c7b89d7b9a4">
+      <h3>Mercedes-Benz C-Class</h3>
+      <p>₦28,000,000</p>
+      <button onclick="showDetails('Mercedes-Benz C-Class','₦28,000,000','Luxury sedan, 2021 model')">View Details</button>
+      <a href="https://wa.me/2340000000000?text=I%20want%20Mercedes%20C-Class" target="_blank">
+        <button>WhatsApp</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
+      <h3>BMW 3 Series</h3>
+      <p>₦25,000,000</p>
+      <button onclick="showDetails('BMW 3 Series','₦25,000,000','Sporty sedan, 2022 model')">View Details</button>
+      <a href="https://wa.me/2340000000000?text=I%20want%20BMW%203%20Series" target="_blank">
+        <button>WhatsApp</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c">
+      <h3>Range Rover</h3>
+      <p>₦45,000,000</p>
+      <button onclick="showDetails('Range Rover','₦45,000,000','Luxury SUV, 2023 model')">View Details</button>
+      <a href="https://wa.me/2340000000000?text=I%20want%20Range%20Rover" target="_blank">
+        <button>WhatsApp</button>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7);">
+  <div style="background:white; padding:20px; margin:10% auto; width:300px; border-radius:10px; text-align:center;">
+    <h2 id="modalTitle"></h2>
+    <p id="modalPrice"></p>
+    <p id="modalDesc"></p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<div class="container" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: contact@uniqauto.com</p>
+  <p>Phone: +234 9032 5025 48</p>
+</div>
+
+<footer>
+  <p>© 2026 Uniq Auto. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
